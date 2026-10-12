@@ -15,12 +15,13 @@ main
 strong
 section
 br
+em
+head
+link
+
 
 b
-head
 i
-em
-link
 script*
 style*
 iframe
