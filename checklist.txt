@@ -18,6 +18,8 @@ br
 em
 head
 link
+ol
+li
 
 
 b
@@ -27,8 +29,6 @@ style*
 iframe
 svg*
 ul
-ol
-li
 form
 label
 fieldset
