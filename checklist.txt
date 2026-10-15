@@ -35,10 +35,9 @@ style*
 button*
 i
 ul
-
-
 script*
 div
+
 textarea
 article
 progress
