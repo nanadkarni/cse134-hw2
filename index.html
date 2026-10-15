@@ -9,13 +9,36 @@
 
         <meta name="viewport" content = "width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/png" href="star.png">
+
+        <style>
+            title-card {
+                display: block;
+                border: 3px solid #0a809e;
+                border-radius: 0.5rem;
+                padding: 0.5rem ;
+                background-color: #d6e4f1;
+                max-width: 320px;
+                font-family: "Playfair Display", Georgia, "Times New Roman", serif;            }
+        </style>
+
        </head>
     <body>
         <header>
-            <h2><a href="index.html">Naomika's Portfolio</a></h2>
+            <title-card>
+                <h2><a href="index.html">Naomika's Portfolio</a></h2>
+                <p>a little look into my mind</p>
+			    <button commandfor="help-dialog" command="show-modal">
+				<svg width="20" height="20" viewBox="0 0 24 24">
+                        <circle r="10" cx="12" cy="12" fill="lightblue" />
+				</svg>
+			</button>
+		</app-help>
+            </title-card>
+            <hr>
             <nav>
             <a href="about.html">About</a>
             <a href="themed_ent.html">Themed Entertainment</a>
+            <a href="experiments.html">Experiments</a>
             </nav>
         </header>
         <main>
@@ -43,4 +66,36 @@
             </form>
         </footer>
     </body>
+    <dialog id="help-dialog">
+		<header>
+			<h2>Hey</h2>
+			<button commandfor="help-dialog" command="close" aria-label="Close">&times;</button>
+		</header>
+		<section>
+            <form id="musical-form" type="POST">
+                <fieldset>
+                    <legend>Quick Question</legend>
+                        <label for="musical">Favourite Musical:</label>
+                            <select name="Favorite Musical" id="musical">
+                                <optgroup label ="mainstream">
+                                    <option value="deh">Dear Evan Hansen</option>
+                                    <option value="ham">Hamilton</option>
+                                    <option value="hades">Hadestown</option>
+                                </optgroup>
+                                <optgroup label ="obscure">
+                                    <option value="falsettos">Falsettos</option>
+                                    <option value="ordinary">Ordinary Days</option>
+                                    <option value="ntn">Next to Normal</option>
+                                </optgroup>
+                            </select>
+                            <br>
+                        <label for="musical2">Another Favourite Musical:</label>
+                            <input type="text" id="musical2" name="musical2" list="musicals" placeholder="Type.">
+                </fieldset>
+            </form>
+		</section>
+		<footer>
+			<button commandfor="help-dialog" command="close" class="primary">Done</button>
+		</footer>
+	</dialog>
 </html>
