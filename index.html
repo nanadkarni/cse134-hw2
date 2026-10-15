@@ -32,7 +32,6 @@
                         <circle r="10" cx="12" cy="12" fill="lightblue" />
 				</svg>
 			</button>
-		</app-help>
             </title-card>
             <hr>
             <nav>
@@ -65,14 +64,13 @@
                 <input type="color" id="headcolor" name="headcolor" value="#ff0000">
             </form>
         </footer>
-    </body>
     <dialog id="help-dialog">
 		<header>
-			<h2>Hey</h2>
 			<button commandfor="help-dialog" command="close" aria-label="Close">&times;</button>
 		</header>
 		<section>
-            <form id="musical-form" type="POST">
+            <h2>Hey</h2>
+            <form id="musical-form" method="POST">
                 <fieldset>
                     <legend>Quick Question</legend>
                         <label for="musical">Favourite Musical:</label>
@@ -83,8 +81,8 @@
                                     <option value="hades">Hadestown</option>
                                 </optgroup>
                                 <optgroup label ="obscure">
-                                    <option value="falsettos">Falsettos</option>
-                                    <option value="ordinary">Ordinary Days</option>
+                                    <option value="falsettos"><i>Falsettos</i></option>
+                                    <option value="ordinary"><i>Ordinary Days</i></option>
                                     <option value="ntn">Next to Normal</option>
                                 </optgroup>
                             </select>
@@ -93,9 +91,17 @@
                             <input type="text" id="musical2" name="musical2" list="musicals" placeholder="Type.">
                 </fieldset>
             </form>
+            <h3>here are some of mine!</h3>
+            <ul>
+                <li>Falsettos</li>
+                <li>Carrie</li>
+                <li>Heathers</li>
+                <li>Mean Girls</li>
+            </ul>
 		</section>
 		<footer>
 			<button commandfor="help-dialog" command="close" class="primary">Done</button>
 		</footer>
 	</dialog>
+    </body>
 </html>
